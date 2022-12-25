@@ -6,14 +6,9 @@ void print(Node * node);
 
 int main() {
 	char name1[] = "Avi";
-	Student * first = new Student(name1);
+	char name2[] = "Moane";
+	Student * first = new Student(name1, name2, 1234, 42.320432);
 	Node * head = new Node(first);
-
-	char name2[] = "Blevins";
-	Student * second = new Student(name2);
-	Node * next = new Node(second);
-
-	head->setNext(next);
 
 	print(head);
 
@@ -21,9 +16,8 @@ int main() {
 }
 
 void print(Node * node) {
-	std::cout << node->getStudent()->getName() << std::endl;
-
-	if (node->getNext() != NULL) {
+	if (node != NULL) {
+		node->getStudent()->print();
 		print(node->getNext());
 	}
 }

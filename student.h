@@ -4,11 +4,18 @@
 
 class Student {
 	public:
-		Student(char * name);
+		Student(char * firstName, char * lastName, int id, double gpa);
 		~Student();
 
-		char * getName();
+		char * getFirstName();
+		char * getLastName();
+		int getID();
+		double getGPA();
+		void print();
 
 	private:
-		char name[50];
+		char firstName[50];
+		char lastName[50];
+		int id;
+		double gpa;
 };
