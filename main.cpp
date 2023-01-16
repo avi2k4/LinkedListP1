@@ -1,14 +1,27 @@
+/*
+Linked List by Avighnash Kumar
+Implementation of linked list in C++
+*/
+
 #include <iostream>
+#include <cstring>
 #include "node.h"
 #include "student.h"
 
 void print(Node * node);
 
 int main() {
-	char name1[] = "Avi";
-	char name2[] = "Moane";
-	Student * first = new Student(name1, name2, 1234, 42.320432);
+	char name1[] = "Tyler";
+	char name2[] = "Blevins";
+	Student * first = new Student(name1, name2, 396333, 3.7524);
 	Node * head = new Node(first);
+
+	char name3[] = "John";
+	char name4[] = "Doe";
+	Student * second = new Student(name3, name4, 204222, 4.00);
+	Node * next = new Node(second);
+
+	head->setNext(next);
 
 	print(head);
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "student.h"
 
 class Node {
